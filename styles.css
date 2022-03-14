@@ -1,0 +1,192 @@
+
+/* ------------------------ 1. Global Styles ----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    /*Dit is belangrijk zodat de breedtes en hoogtes van elementen worden berekend INCLUSIEF padding en marin */
+    Box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/* --------------------- 2. Typography ------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, 'Times New Roman', serif;
+}
+
+h1, h2 {
+    font-size: 46px;
+    padding: 16px 0;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 32px;
+    padding: 12px 0;
+    margin: 24px 0;
+}
+
+h5 {
+    font-size: 32px;
+    padding: 12px 0;
+}
+
+h6 {
+    font-size: 32px;
+    line-height: 1.5;
+    padding: 12px 0;
+}
+
+p {
+    margin: 12px 0;
+}
+
+/* --------------------------- 3. Layout ------------------ */
+
+/* ---------------- 3.1 Reuseables --------------- */
+.outer-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.inner-content-container {
+    flex-basis: 1200px;
+    /*Dit is de maximale grootte */
+    flex-grow: 0;
+    /*Dit zorgt ervoor dat het niet groeit */
+    flex-shrink: 1;
+    /*Dit is het maximale wat die mag krimpen */
+    border: 2px solid red;
+
+    /*container properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+}
+/* ---------------- 3.2 Other ----------------- */
+nav a,
+nav a:visited,
+nav a:link {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #ED4385;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 8px 4px rgba(0, 0, 0, .2);
+    padding: 25px 40px;
+    margin: 28px 0;
+}
+
+button:hover {
+    cursor:pointer;
+}
+
+/* ---------------------------------- 4. Areas -------------------- */
+
+/* ----------------- 4.1 Header -------------------- */
+#header {
+    background-color: #5722CD;
+}
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 2px solid black;
+}
+
+.header-navigation ul {
+    border: 2px solid green;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 400px;
+    /*flexbasis gebruik je om ruimte te geven zodat space-between werkt */
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.header-content {
+    border: 2px solid orange;
+    margin: 100px 0px;
+    max-width: 700px;
+    text-align: center;
+}
+/* ----------------- 4.2 Introduction ----------- */
+
+/* ----------------- 4.3 Work ---------------- */
+
+#work {
+    background-color: aliceblue;
+}
+
+.work-article {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.work-article-reverse {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/*Dit zorgt ervoor dat even of odd aangesproken wordt. Handig met grote websites. */
+.work-article:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.work-article-content {
+    border: 2px dotted orange;
+    flex-basis: 310px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.work-article-image-wrapper {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border: 2px dotted orange;
+}
+
+
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #5722CD;
+}
+/* ----------------- 4.4 Services ----------- */
+
+/* ----------------- 4.5 Contact ------------ */
+
+/* ----------------- 4.6 Footer ------------- */
